@@ -28,14 +28,14 @@ def pending():
 
 
 if __name__ == '__main__':
-    dt = datetime.now()
-    h = dt.hour
-    m = dt.minute
+
     schedule.every().hour.at(f'50:{get_secs()}').do(click_video)
     schedule.every().hour.at(f'00:{get_secs()}').do(click_video)
 
     while True:
-        if dt.hour == 12:
+        dt = datetime.now()
+        h = dt.hour
+        if h == 12:
             time.sleep(1)
             continue
         schedule.run_pending()
