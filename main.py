@@ -26,9 +26,11 @@ def pending():
     schedule.run_pending()
     time.sleep(1)
 
+def test():
+
+
 
 if __name__ == '__main__':
-
     schedule.every().hour.at(f'50:{get_secs()}').do(click_video)
     schedule.every().hour.at(f'00:{get_secs()}').do(click_video)
 
@@ -38,5 +40,4 @@ if __name__ == '__main__':
         if h == 12:
             time.sleep(1)
             continue
-        schedule.run_pending()
-        time.sleep(1)
+        pending()
