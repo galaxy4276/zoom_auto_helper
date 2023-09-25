@@ -27,8 +27,7 @@ def pending():
     time.sleep(1)
 
 def test():
-
-
+    pass
 
 if __name__ == '__main__':
     schedule.every().hour.at(f'50:{get_secs()}').do(click_video)
