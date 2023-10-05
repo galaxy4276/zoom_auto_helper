@@ -40,7 +40,7 @@ if __name__ == '__main__':
     while True:
         dt = datetime.now()
         h = dt.hour
-        if h == 12 or h == 8:
-            time.sleep(1)
+        if h == 12 or h == 8 or h >= 17:
+            time.sleep(10)
             continue
         pending()
